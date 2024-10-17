@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Kodchasan";
+    src: url("../../src/assets/fonts/Kodchasan-ExtraLight.ttf") format(ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Kodchasan";
+    src: url("../../src/assets/fonts/Kodchasan-Regular.ttf") format(ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Kodchasan";
+    src: url("../../src/assets/fonts/Kodchasan-SemiBold.ttf") format(ttf);
+    font-weight: 600;
+}
+
+// Page Headers
+
+$page-size: 1.75rem;
+$page-height: 2.25rem;
+
+@mixin page-header {
+    font-size: $page-size;
+    font-weight: 600;
+    line-height: $page-height;
+}
+
+// Subheader
+
+$subheader-size: 1.25rem;
+$subheader-height: 1.75rem;
+
+@mixin subheader {
+    font-size: $subheader-size;
+    font-weight: 400;
+    line-height: $subheader-height;
+}
+
+// Labels, links, buttons
+
+$interactive-size: 0.8125rem;
+$interactive-height: 1.25rem;
+
+@mixin interactive {
+    font-size: $interactive-size;
+    font-weight: 400;
+    line-height: $interactive-height;
+}
+
+// Body
+
+$body-size: 0.8125rem;
+$body-height: 1.25rem;
+
+@mixin body {
+    font-size: $body-size;
+    font-weight: 200;
+    line-height: $body-height;
+}
