@@ -49,7 +49,7 @@ function BetterWorld() {
         <div className="better-world">
             <div className="better-world__nav-bar">
                 <Link
-                    to=""
+                    to="/"
                     className="better-world__back-arrow"
                 >
                     <img src={Backarrowblue} alt="Back arrow" />    
