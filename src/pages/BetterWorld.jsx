@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./BetterWorld.scss";
-import Backarrow from "../assets/icons/arrow_back.svg";
+import Backarrowblue from "../assets/icons/arrow_back_blue.svg";
 
 
 
@@ -52,19 +52,21 @@ function BetterWorld() {
                     to=""
                     className="better-world__back-arrow"
                 >
-                    <img src={Backarrow} alt="Back arrow" />    
+                    <img src={Backarrowblue} alt="Back arrow" />    
                 </Link>
 
                 <h2>Better World</h2>
             </div>
-            
-            <ul className="better-world__topics">
-                {topics.map((topic, index) => (
-                    <li key={index}>
-                        {topic.name}
-                    </li>
-                ))}
-            </ul>
+
+            <article className="better-world__card">
+                <ul className="better-world__card-topics">
+                    {topics.map((topic, index) => (
+                        <li key={index}>
+                            {topic.name}
+                        </li>
+                    ))}
+                </ul>
+            </article>
         </div>
     );
 
