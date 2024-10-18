@@ -1,12 +1,12 @@
 @use "../../styles/typography" as *;
 @use "../../styles/variables" as *;
 
-.community {
-	background-image: url("../../assets/photos/community.jpg");
+.workplace {
+	background-image: url("../../assets/photos/workplace.jpeg");
 	background-position: center;
 	background-size: cover;
-	position: relative;
 	background-repeat: no-repeat;
+	position: relative;
 	height: 120vh;
 
 	&__nav-bar {
@@ -31,10 +31,10 @@
 		border-radius: 8px;
 		padding: 16px;
 		text-align: center;
-		margin: 4rem 2rem;
+		margin: 4rem 2rem 0;
 	}
 
-	&__card-heading {
+	&__card-topics {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
