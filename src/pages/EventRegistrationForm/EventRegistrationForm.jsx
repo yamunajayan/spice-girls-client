@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import "../EventRegistrationForm/EventRegistrationForm.scss";
+import "./EventRegistrationForm.scss";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-function EventRegistrationForm({ eventId }) {
+function EventRegistrationForm() {
+    const { eventId } = useParams();
     const [formData, setFormData] = useState({
         user_name: "",
         user_email: "",
@@ -38,15 +41,9 @@ function EventRegistrationForm({ eventId }) {
         }
 
         try {
-            const response = await fetch(
+            const response = await axios.post(
                 "http://localhost:8080/events/register",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                }
+                { body: formData }
             );
 
             if (response.ok) {
