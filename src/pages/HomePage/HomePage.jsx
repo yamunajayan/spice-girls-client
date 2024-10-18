@@ -17,7 +17,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="buttons">
-                <Link to="/betterworld" className="button__link">
+                <Link to="/mentalhealth" className="button__link">
                     <button className="button">
                         <GlobeIcon className="button__icon" />
                         <p className="button__text">World</p>
