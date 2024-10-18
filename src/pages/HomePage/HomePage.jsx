@@ -27,10 +27,12 @@ export default function HomePage() {
                     <GroupIcon className="button__icon" />
                     <p className="button__text">Communities</p>
                 </button>
+                <Link to="/workplace" className="button__link">
                 <button className="button">
                     <WorkIcon className="button__icon" />
                     <p className="button__text">Work</p>
                 </button>
+                </Link>
                 <button className="button">
                     <VolunteerIcon className="button__icon" />
                     <p className="button__text">Volunteering</p>
