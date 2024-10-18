@@ -34,7 +34,7 @@ $subheader-height: 1.75rem;
 
 @mixin subheader {
     font-size: $subheader-size;
-    font-weight: 400;
+    font-weight: 500;
     line-height: $subheader-height;
 }
 
@@ -45,7 +45,7 @@ $interactive-height: 1.25rem;
 
 @mixin interactive {
     font-size: $interactive-size;
-    font-weight: 400;
+    font-weight: 500;
     line-height: $interactive-height;
 }
 
