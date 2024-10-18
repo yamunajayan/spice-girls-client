@@ -20,7 +20,7 @@ export default function HomePage() {
                 <Link to="/mentalhealth" className="button__link">
                     <button className="button">
                         <GlobeIcon className="button__icon" />
-                        <p className="button__text">World</p>
+                        <p className="button__text">Mental Health</p>
                     </button>
                 </Link>
                 <button className="button">
@@ -29,7 +29,7 @@ export default function HomePage() {
                 </button>
                 <button className="button">
                     <WorkIcon className="button__icon" />
-                    <p className="button__text">Work</p>
+                    <p className="button__text">Workplace</p>
                 </button>
                 <button className="button">
                     <VolunteerIcon className="button__icon" />
