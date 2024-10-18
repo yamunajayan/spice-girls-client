@@ -74,11 +74,11 @@ function Community() {
                                 </p>
                                 <p className="community__info">{topic.event_type}</p>
                                 <p className="community__info  community__info--date">
-                                    {heading.date.split("T")[0]}
+                                    {topic.date.split("T")[0]}
                                 </p>
-                                <p className="community__info">{heading.location}</p>
+                                <p className="community__info">{topic.location}</p>
 
-                                <Link to={`/register/${heading.id}`}>
+                                <Link to={`/register/${topic.id}`}>
                                     <button className="community__button">Register</button>
                                 </Link>
                                 </div>
