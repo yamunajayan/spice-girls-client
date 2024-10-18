@@ -1,0 +1,9 @@
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+.hero {
+    display: flex;
+    background: url("/src/assets/photos/forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
