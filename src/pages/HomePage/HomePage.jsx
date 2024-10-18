@@ -23,14 +23,18 @@ export default function HomePage() {
                         <p className="button__text">World</p>
                     </button>
                 </Link>
+                <Link to="/community" className="button__link">
                 <button className="button">
                     <GroupIcon className="button__icon" />
                     <p className="button__text">Communities</p>
                 </button>
+                </Link>
+                <Link to="/workplace" className="button__link">
                 <button className="button">
                     <WorkIcon className="button__icon" />
                     <p className="button__text">Workplace</p>
                 </button>
+                </Link>
                 <button className="button">
                     <VolunteerIcon className="button__icon" />
                     <p className="button__text">Volunteering</p>
