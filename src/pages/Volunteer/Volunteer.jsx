@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "../MentalHealth/MentalHealth.scss";
+import "./Volunteer.scss";
 import Backarrowblue from "../../assets/icons/arrow_back_blue.svg";
 
-function MentalHealth() {
+function Volunteer() {
   const [topics, setTopics] = useState([]);
   const [expandedId, setExpandedId] = useState(null);
   //   const [loading, setLoading] = useState(true);
@@ -14,7 +14,7 @@ function MentalHealth() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "http://localhost:8080/events/mental_health"
+          "http://localhost:8080/events/volunteer"
         );
         console.log(response.data); //(API);
         setTopics(response.data);
@@ -43,38 +43,36 @@ function MentalHealth() {
   console.log("Current topics state:");
 
   return (
-    <div className="mental-health">
-      <div className="mental-health__nav-bar">
-        <Link to="/" className="mental-health__back-arrow">
+    <div className="volunteer">
+      <div className="volunteer__nav-bar">
+        <Link to="/" className="volunteer__back-arrow">
           <img src={Backarrowblue} alt="Back arrow" />
         </Link>
 
         <h2>Better World</h2>
       </div>
 
-      <article className="mental-health__card">
-        <ul className="mental-health__card-topics">
+      <article className="volunteer__card">
+        <ul className="volunteer__card-topics">
           {topics.map((topic) => (
-            <li key={topic.id} className="mental-health__card-items">
+            <li key={topic.id} className="volunteer__card-items">
               <h3
-                className="mental-health__title"
+                className="volunteer__title"
                 onClick={() => toggleExpand(topic.id)}
               >
                 {topic.title}
               </h3>
               {expandedId === topic.id && (
-                <div className="mental-health__details">
-                  <p className="mental-health__description">
-                    {topic.description}
-                  </p>
-                  <p className="mental-health__info">{topic.event_type}</p>
-                  <p className="mental-health__info  mental-health__info--date">
+                <div className="volunteer__details">
+                  <p className="volunteer__description">{topic.description}</p>
+                  <p className="volunteer__info">{topic.event_type}</p>
+                  <p className="volunteer__info  volunteer__info--date">
                     {topic.date.split("T")[0]}
                   </p>
-                  <p className="mental-health__info">{topic.location}</p>
+                  <p className="volunteer__info">{topic.location}</p>
 
                   <Link to={`/register/${topic.id}`}>
-                    <button className="mental-health__button">Register</button>
+                    <button className="volunteer__button">Register</button>
                   </Link>
                 </div>
               )}
@@ -86,4 +84,4 @@ function MentalHealth() {
   );
 }
 
-export default MentalHealth;
+export default Volunteer;

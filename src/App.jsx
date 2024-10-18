@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage.jsx";
 import MentalHealth from "./pages/MentalHealth/MentalHealth.jsx";
 import Community from "./pages/Community/Community.jsx";
 import Workplace from "./pages/Workplace/Workplace.jsx";
+import Volunteer from "./pages/Volunteer/Volunteer.jsx";
 
 function App() {
     return (
@@ -13,14 +14,16 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
 
-                <Route path="/mentalhealth" element={<MentalHealth />} />
 
-                <Route path="/community" element={<Community />} />
+        <Route path="/mentalhealth" element={<MentalHealth />} />
 
-                <Route path="/workplace" element={<Workplace />} />
-            </Routes>
-        </BrowserRouter>
-    );
+        <Route path="/community" element={<Community />} />
+        <Route path="/workplace" element={<Workplace />} />
+        <Route path="/volunteer" element={<Volunteer />} />
+      </Routes>
+    </BrowserRouter>
+  );
+
 }
 
 export default App;
