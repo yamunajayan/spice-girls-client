@@ -8,10 +8,10 @@ import Backarrowblue from "../../assets/icons/arrow_back_blue.svg";
 
 function Community() {
 
-    const [headings, setHeadings] = useState([]);
-    const [expandedHeadingId, setExpandedHeadingId] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [topics, setTopics] = useState([]);
+    const [expandedId, setExpandedId] = useState(null);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
 
     
 
@@ -22,10 +22,10 @@ function Community() {
                 const response = await axios.get(
                     "http://localhost:8080/events/community"
                 );
-                setHeadings(response.data);
+                setTopics(response.data);
             } catch (error) {
-                setError("Failed to fetch");
-                setLoading(false);
+                // setError("Failed to fetch");
+                // setLoading(false);
             }
         }
         fetchData();
@@ -37,13 +37,13 @@ function Community() {
 
 
 
-    if (loading) {
-        return <div>One moment please...</div>
-    }
+    // if (loading) {
+    //     return <div>One moment please...</div>
+    // }
 
-    if (error) {
-        return <div>{error}</div>
-    }
+    // if (error) {
+    //     return <div>{error}</div>
+    // }
         
 
 
@@ -59,11 +59,11 @@ function Community() {
 
             <article className="community__card">
                 <ul className="community__card-heading">
-                    {headings.map((heading) => (
-                        <li key={heading.id} className="community__card-items">
+                    {topics.map((topic) => (
+                        <li key={topic.id} className="community__card-items">
                             <h3
                                  className="community__title"
-                                 onClick={() => toggleExpand(heading.id)}
+                                 onClick={() => toggleExpand(topic.id)}
                             >
                                 {topic.title}
                             </h3>
