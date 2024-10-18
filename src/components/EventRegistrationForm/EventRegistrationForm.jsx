@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../EventRegistrationForm/EventRegistrationForm.scss";
 
 function EventRegistrationForm({ eventId }) {
     const [formData, setFormData] = useState({
@@ -60,43 +61,62 @@ function EventRegistrationForm({ eventId }) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="user_name">Name:</label>
+        <form onSubmit={handleSubmit} className="form">
+            <h2 className="form__header">
+                Thank you for your interest in this event!
+            </h2>
+            <p className="form__body">
+                Fill out this form to complete your registration
+            </p>
+            <div className="form__field">
+                <label htmlFor="user_name" className="form__field--label">
+                    Name:
+                </label>
                 <input
                     type="text"
                     id="user_name"
                     name="user_name"
                     value={formData.user_name}
+                    placeholder="Name"
                     onChange={handleChange}
+                    className="form__field--input"
                     required
                 />
             </div>
-            <div>
-                <label htmlFor="user_email">Email:</label>
+            <div className="form__field">
+                <label htmlFor="user_email" className="form__field--label">
+                    Email:
+                </label>
                 <input
                     type="email"
                     id="user_email"
                     name="user_email"
                     value={formData.user_email}
+                    placeholder="janedoe@email.com"
                     onChange={handleChange}
+                    className="form__field--input"
                     required
                 />
             </div>
-            <div>
-                <label htmlFor="phone_number">Phone Number:</label>
+            <div className="form__field">
+                <label htmlFor="phone_number" className="form__field--label">
+                    Phone Number:
+                </label>
                 <input
                     type="tel"
                     id="phone_number"
                     name="phone_number"
                     value={formData.phone_number}
+                    placeholder="XXX-XXX-XXXX"
                     onChange={handleChange}
+                    className="form__field--input"
                     pattern="\d{3}-\d{3}-\d{4}"
                     required
                 />
-                <small>Format: XXX-XXX-XXXX</small>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" className="form__button">
+                Register
+            </button>
         </form>
     );
 }

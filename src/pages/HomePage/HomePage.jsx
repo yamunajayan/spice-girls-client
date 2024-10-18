@@ -4,6 +4,7 @@ import GroupIcon from "../../assets/icons/group.svg?react";
 import WorkIcon from "../../assets/icons/work.svg?react";
 import VolunteerIcon from "../../assets/icons/volunteer.svg?react";
 import { Link } from "react-router-dom";
+import EventRegistrationForm from "../../components/EventRegistrationForm/EventRegistrationForm";
 
 export default function HomePage() {
   return (
