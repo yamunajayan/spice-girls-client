@@ -9,13 +9,13 @@ import Workplace from "./pages/Workplace/Workplace.jsx";
 function App() {
     return (
         <BrowserRouter>
-            <svg tabindex="-1" focusable="false" data-di-rand="1729193652193">
+            {/* <svg tabindex="-1" focusable="false" data-di-rand="1729193652193">
                 <use
                     tabindex="-1"
                     focusable="false"
                     xlink:href="#icon-bell-logo"
                 ></use>
-            </svg>
+            </svg> */}
             <Header />
             <Routes>
                 <Route path="/" element={<HomePage />} />

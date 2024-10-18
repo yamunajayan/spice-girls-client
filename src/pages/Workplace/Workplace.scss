@@ -7,7 +7,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-	height: 100vh;
+	height: 100%;
 
 	&__nav-bar {
 		display: flex;
@@ -31,7 +31,7 @@
 		border-radius: 8px;
 		padding: 16px;
 		text-align: center;
-		margin: 4rem 2rem;
+		margin: 0 2rem;
 	}
 
 	&__card-topics {
