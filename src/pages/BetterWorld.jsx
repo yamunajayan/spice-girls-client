@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import "./BetterWorld.scss";
+import Backarrow from "../assets/icons/arrow_back.svg";
 
 
 
@@ -11,6 +13,19 @@ function BetterWorldPage() {
     const [error, setError] = useState(null);
 
 
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await axios.get//(API);
+                setTopics(response.data);
+            } catch (error) {
+                setError("Failed to fetch");
+                setLoading(false);
+            }
+        }
+        fetchData();
+    }, []);
+
 
 
     if (loading) {
@@ -18,14 +33,24 @@ function BetterWorldPage() {
     }
 
     if (error) {
-        return <div>Error: {error}</div>
+        return <div>{error}</div>
     }
         
 
 
     return (
+        <div className="better-world">
+            <h2>Better World</h2>
 
-    )
+            <ul>
+                {topics.map((topic, index) => (
+                    <li key={index}>
+                        {topic.name}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 
 
 
