@@ -1,0 +1,43 @@
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    color: $white;
+    padding: 1.5rem;
+
+    &__title {
+        @include page-header;
+        padding: 0.5rem;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &--learn {
+            @include interactive;
+            width: 49%;
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: 1px solid $white;
+            background-color: transparent;
+            color: $button-text;
+
+            &:hover {
+                background-color: $hover;
+                color: $white;
+                font-weight: 500;
+            }
+        }
+
+        &--sign {
+            @extend .header__buttons--learn;
+        }
+    }
+}
