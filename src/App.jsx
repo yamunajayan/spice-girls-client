@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Header from "../src/components/Header/Header.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
-import BetterWorld from "./pages/BetterWorld.jsx";
+import MentalHealth from "./pages/MentalHealth/MentalHealth.jsx";
 
 function App() {
     return (
@@ -18,7 +18,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
 
-                <Route path="/betterworld" element={<BetterWorld />} />
+                <Route path="/mentalhealth" element={<MentalHealth />} />
             </Routes>
         </BrowserRouter>
     );

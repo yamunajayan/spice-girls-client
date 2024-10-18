@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./BetterWorld.scss";
-import Backarrowblue from "../assets/icons/arrow_back_blue.svg";
+import "../MentalHealth/MentalHealth.scss";
+import Backarrowblue from "../../assets/icons/arrow_back_blue.svg";
 
 
 
-function BetterWorld() {
+function MentalHealth() {
 
     // const [topics, setTopics] = useState([]);
     // const [loading, setLoading] = useState(true);
@@ -46,11 +46,11 @@ function BetterWorld() {
 
 
     return (
-        <div className="better-world">
-            <div className="better-world__nav-bar">
+        <div className="mental-health">
+            <div className="mental-health__nav-bar">
                 <Link
                     to="/"
-                    className="better-world__back-arrow"
+                    className="mental-health__back-arrow"
                 >
                     <img src={Backarrowblue} alt="Back arrow" />    
                 </Link>
@@ -58,8 +58,8 @@ function BetterWorld() {
                 <h2>Better World</h2>
             </div>
 
-            <article className="better-world__card">
-                <ul className="better-world__card-topics">
+            <article className="mental-health__card">
+                <ul className="mental-health__card-topics">
                     {topics.map((topic, index) => (
                         <li key={index}>
                             {topic.name}
@@ -84,4 +84,4 @@ function BetterWorld() {
 
 
 
-export default BetterWorld;
+export default MentalHealth;

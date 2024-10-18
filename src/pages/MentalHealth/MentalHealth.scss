@@ -1,8 +1,8 @@
-@use "../styles/typography" as *;
-@use "../styles/variables" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
 
-.better-world {
-	background-image: url("../assets/images/people.png");
+.mental-health {
+	background-image: url("../../assets/photos/people.jpg");
 	background-position: center;
 	position: relative;
 	height: 100vh;
