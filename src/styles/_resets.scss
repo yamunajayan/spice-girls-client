@@ -1,3 +1,6 @@
+@use "../styles/typography" as *;
+@use "../styles/variables" as *;
+
 *,
 *::before,
 *::after {
@@ -44,6 +47,19 @@ h6 {
     isolation: isolate;
 }
 
+textarea {
+    resize: none;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+
+    &:visited {
+        color: $white;
+    }
+}
+
 body {
-    font-family: "Kodchasan", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
