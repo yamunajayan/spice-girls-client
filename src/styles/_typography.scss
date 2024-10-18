@@ -1,19 +1,19 @@
 @font-face {
-    font-family: "Kodchasan";
-    src: url("../../src/assets/fonts/Kodchasan-ExtraLight.ttf") format(ttf);
-    font-weight: 200;
+    font-family: "Quicksand";
+    src: url("../../src/assets/fonts/Quicksand-Light.ttf") format(ttf);
+    font-weight: 300;
 }
 
 @font-face {
-    font-family: "Kodchasan";
-    src: url("../../src/assets/fonts/Kodchasan-Regular.ttf") format(ttf);
+    font-family: "Quicksand";
+    src: url("../../src/assets/fonts/Quicksand-Regular.ttf") format(ttf);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "Kodchasan";
-    src: url("../../src/assets/fonts/Kodchasan-SemiBold.ttf") format(ttf);
-    font-weight: 600;
+    font-family: "Quicksand";
+    src: url("../../src/assets/fonts/Quicksand-Medium.ttf") format(ttf);
+    font-weight: 500;
 }
 
 // Page Headers
@@ -56,6 +56,6 @@ $body-height: 1.25rem;
 
 @mixin body {
     font-size: $body-size;
-    font-weight: 200;
+    font-weight: 300;
     line-height: $body-height;
 }

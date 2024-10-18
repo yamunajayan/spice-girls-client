@@ -1,3 +1,5 @@
+@use "../styles/typography" as *;
+
 *,
 *::before,
 *::after {
@@ -44,6 +46,10 @@ h6 {
     isolation: isolate;
 }
 
+textarea {
+    resize: none;
+}
+
 body {
-    font-family: "Kodchasan", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
