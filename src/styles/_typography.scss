@@ -1,19 +1,19 @@
 @font-face {
-    font-family: "Quicksand";
-    src: url("../../src/assets/fonts/Quicksand-Light.ttf") format(ttf);
-    font-weight: 300;
+  font-family: "Quicksand-2";
+  src: url("../../src/assets/fonts/Quicksand-Light.ttf") format(ttf);
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: "Quicksand";
-    src: url("../../src/assets/fonts/Quicksand-Regular.ttf") format(ttf);
-    font-weight: 400;
+  font-family: "Quicksand-2";
+  src: url("../../src/assets/fonts/Quicksand-Regular.ttf") format(ttf);
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "Quicksand";
-    src: url("../../src/assets/fonts/Quicksand-Medium.ttf") format(ttf);
-    font-weight: 500;
+  font-family: "Quicksand-2";
+  src: url("../../src/assets/fonts/Quicksand-Medium.ttf") format(ttf);
+  font-weight: 500;
 }
 
 // Page Headers
@@ -22,9 +22,9 @@ $page-size: 1.75rem;
 $page-height: 2.25rem;
 
 @mixin page-header {
-    font-size: $page-size;
-    font-weight: 600;
-    line-height: $page-height;
+  font-size: $page-size;
+  font-weight: 600;
+  line-height: $page-height;
 }
 
 // Subheader
@@ -33,9 +33,9 @@ $subheader-size: 1.25rem;
 $subheader-height: 1.75rem;
 
 @mixin subheader {
-    font-size: $subheader-size;
-    font-weight: 500;
-    line-height: $subheader-height;
+  font-size: $subheader-size;
+  font-weight: 500;
+  line-height: $subheader-height;
 }
 
 // Labels, links, buttons
@@ -44,9 +44,9 @@ $interactive-size: 0.8125rem;
 $interactive-height: 1.25rem;
 
 @mixin interactive {
-    font-size: $interactive-size;
-    font-weight: 500;
-    line-height: $interactive-height;
+  font-size: $interactive-size;
+  font-weight: 500;
+  line-height: $interactive-height;
 }
 
 // Body
@@ -55,7 +55,7 @@ $body-size: 1rem;
 $body-height: 1.25rem;
 
 @mixin body {
-    font-size: $body-size;
-    font-weight: 300;
-    line-height: $body-height;
+  font-size: $body-size;
+  font-weight: 300;
+  line-height: $body-height;
 }
