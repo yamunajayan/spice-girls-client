@@ -4,6 +4,7 @@ import GroupIcon from "../../assets/icons/group.svg?react";
 import WorkIcon from "../../assets/icons/work.svg?react";
 import VolunteerIcon from "../../assets/icons/volunteer.svg?react";
 import { Link } from "react-router-dom";
+import EventRegistrationForm from "../../components/EventRegistrationForm/EventRegistrationForm";
 
 export default function HomePage() {
     return (
@@ -24,16 +25,16 @@ export default function HomePage() {
                     </button>
                 </Link>
                 <Link to="/community" className="button__link">
-                <button className="button">
-                    <GroupIcon className="button__icon" />
-                    <p className="button__text">Communities</p>
-                </button>
+                    <button className="button">
+                        <GroupIcon className="button__icon" />
+                        <p className="button__text">Communities</p>
+                    </button>
                 </Link>
                 <Link to="/workplace" className="button__link">
-                <button className="button">
-                    <WorkIcon className="button__icon" />
-                    <p className="button__text">Workplace</p>
-                </button>
+                    <button className="button">
+                        <WorkIcon className="button__icon" />
+                        <p className="button__text">Workplace</p>
+                    </button>
                 </Link>
                 <button className="button">
                     <VolunteerIcon className="button__icon" />
