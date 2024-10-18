@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import "../MentalHealth/MentalHealth.scss";
 import Backarrowblue from "../../assets/icons/arrow_back_blue.svg";
@@ -18,6 +18,11 @@ function Workplace() {
         { name: "Accessible Technology for All" }
     ]);
 
+    const navigate = useNavigate();
+    
+    const handleGoBack = () => {
+        navigate(-1);
+      };
 
     // useEffect(() => {
     //     async function fetchData() {
@@ -49,7 +54,7 @@ function Workplace() {
                     to="/Workplace"
                     className="workplace__back-arrow"
                 >
-                    <img src={Backarrowblue} alt="Back arrow" />    
+                    <img src={Backarrowblue} alt="Back arrow" onClick={handleGoBack}/>    
                 </Link>
 
                 <h2>Better Workplace</h2>
