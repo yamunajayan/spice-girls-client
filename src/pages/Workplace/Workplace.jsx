@@ -32,6 +32,7 @@ function Workplace() {
             setError(error.message);
         }
         setLoading(false);
+   
     }
     fetchData();
     }, []);
