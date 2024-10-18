@@ -7,12 +7,10 @@ import "./Workplace.scss";
 
 function Workplace() {
 
-    // const [topics, setTopics] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
-
     const [topics, setTopics] = useState([]);
     const [expandedId, setExpandedId] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const handleGoBack = () => {
@@ -26,27 +24,26 @@ function Workplace() {
     useEffect(() => {
     async function fetchData() {
         try {
-        const response = await axios.get(
-            "http://localhost:8080/events/workplace"
-        );
-        console.log(response.data); //(API);
-        setTopics(response.data);
+            const response = await axios.get(
+                "http://localhost:8080/events/workplace"
+            );
+            setTopics(response.data);
         } catch (error) {
-        setError("Failed to fetch");
-        setLoading(false);
+            setError(error.message);
         }
+        setLoading(false);
     }
     fetchData();
     }, []);
 
 
-    // if (loading) {
-    //     return <div>One moment please...</div>
-    // }
+    if (loading) {
+        return <div>One moment please...</div>
+    }
 
-    // if (error) {
-    //     return <div>{error}</div>
-    // }
+    if (error) {
+        return <div>{error}</div>
+    }
         
     return (
         <div className="workplace">
