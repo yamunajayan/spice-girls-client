@@ -48,7 +48,7 @@ function Volunteer() {
           <img src={Backarrowblue} alt="Back arrow" />
         </Link>
 
-        <h2>Better World</h2>
+        <h2>Volunteer</h2>
       </div>
 
       <article className="volunteer__card">
