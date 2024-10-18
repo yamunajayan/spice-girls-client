@@ -1,0 +1,63 @@
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    border: 2px solid $blue;
+    border-radius: 10px;
+    margin: 1rem;
+
+    &__header {
+        @include subheader;
+        font-weight: 600;
+    }
+
+    &__body {
+        @include body;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--label {
+            color: $blue;
+        }
+
+        &--input {
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: 1px solid $body;
+
+            &:focus {
+                border: none;
+                outline: 2px solid $blue;
+            }
+        }
+    }
+
+    &__button {
+        @include subheader;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 2px solid $blue;
+        background-color: $white;
+        color: $blue;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+            font-weight: 600;
+        }
+    }
+}
