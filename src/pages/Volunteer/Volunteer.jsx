@@ -7,8 +7,8 @@ import Backarrowblue from "../../assets/icons/arrow_back_blue.svg";
 function Volunteer() {
   const [topics, setTopics] = useState([]);
   const [expandedId, setExpandedId] = useState(null);
-  //   const [loading, setLoading] = useState(true);
-  //   const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -20,21 +20,20 @@ function Volunteer() {
         setTopics(response.data);
       } catch (error) {
         setError("Failed to fetch");
-        setLoading(false);
       }
+      setLoading(false);
     }
     fetchData();
   }, []);
 
-  //   if (loading) {
-  //     return <div>One moment please...</div>;
-  //   } else {
-  //     console.log("Current topics state:");
-  //   }
 
-  //   if (error) {
-  //     return <div>{error}</div>;
-  //   }
+  if (loading) {
+      return <div>One moment please...</div>
+  }
+
+  if (error) {
+      return <div>{error}</div>
+  }
 
   const toggleExpand = (id) => {
     setExpandedId((prevId) => (prevId === id ? null : id)); // Toggle the same id or collapse
