@@ -11,32 +11,33 @@ function Workplace() {
     // const [loading, setLoading] = useState(true);
     // const [error, setError] = useState(null);
 
-    const [topics, setTopics] = useState([
-        {name: "Mental Health for Everyone" },
-        { name: "Protecting the Environment" },
-        { name: "Safeguarding Data Privacy" },
-        { name: "Accessible Technology for All" }
-    ]);
-
+    const [topics, setTopics] = useState([]);
+    const [expandedId, setExpandedId] = useState(null);
     const navigate = useNavigate();
-    
+
     const handleGoBack = () => {
         navigate(-1);
       };
 
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         try {
-    //             const response = await axios.get//(API);
-    //             setTopics(response.data);
-    //         } catch (error) {
-    //             setError("Failed to fetch");
-    //             setLoading(false);
-    //         }
-    //     }
-    //     fetchData();
-    // }, []);
-
+    const toggleExpand = (id) => {
+    setExpandedId((prevId) => (prevId === id ? null : id)); // Toggle the same id or collapse
+    };
+    
+    useEffect(() => {
+    async function fetchData() {
+        try {
+        const response = await axios.get(
+            "http://localhost:8080/events/workplace"
+        );
+        console.log(response.data); //(API);
+        setTopics(response.data);
+        } catch (error) {
+        setError("Failed to fetch");
+        setLoading(false);
+        }
+    }
+    fetchData();
+    }, []);
 
 
     // if (loading) {
@@ -61,12 +62,33 @@ function Workplace() {
             </div>
 
             <article className="workplace__card">
-                <ul className="workplace__card-topics">
-                    {topics.map((topic, index) => (
-                        <li key={index}>
-                            {topic.name}
-                        </li>
-                    ))}
+            <ul className="workplace__card-topics">
+                {topics.map((topic) => (
+                    <li key={topic.id} className="workplace__card-items">
+                    <h3
+                        className="workplace__title"
+                        onClick={() => toggleExpand(topic.id)}
+                    >
+                        {topic.title}
+                    </h3>
+                    {expandedId === topic.id && (
+                        <div className="workplace__details">
+                        <p className="workplace__description">
+                            {topic.description}
+                        </p>
+                        <p className="workplace__info">{topic.event_type}</p>
+                        <p className="workplace__info  workplace__info--date">
+                            {topic.date.split("T")[0]}
+                        </p>
+                        <p className="workplace__info">{topic.location}</p>
+
+                        <Link to={`/register/${topic.id}`}>
+                            <button className="workplace__button">Register</button>
+                        </Link>
+                        </div>
+                    )}
+                    </li>
+                ))}
                 </ul>
             </article>
         </div>

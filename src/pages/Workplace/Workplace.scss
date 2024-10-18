@@ -7,7 +7,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-	height: 120vh;
+	height: 100%;
 
 	&__nav-bar {
 		display: flex;
@@ -43,6 +43,43 @@
 
 		li {
 			padding: 2rem;
+            width: 80%;
 		}
 	}
+        
+    &__card-items {
+        margin-bottom: 1rem;
+        background-color: $blue;
+        color: $white;
+        border-radius: 1rem;
+    }
+
+    &__details {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        background-color: rgba(246, 246, 246, 0.9);
+        color: $body;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+
+    &__info {
+        padding-top: 1rem;
+        &--date {
+        color: $blue;
+        }
+    }
+
+    &__button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: $blue;
+        color: $white;
+        border: 1px solid $white;
+        border-radius: 1rem;
+    }
 }
