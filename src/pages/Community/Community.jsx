@@ -10,11 +10,8 @@ function Community() {
 
     const [topics, setTopics] = useState([]);
     const [expandedId, setExpandedId] = useState(null);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
-
-    
-
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -24,9 +21,9 @@ function Community() {
                 );
                 setTopics(response.data);
             } catch (error) {
-                // setError("Failed to fetch");
-                // setLoading(false);
+                setError("Failed to fetch");
             }
+            setLoading(false);
         }
         fetchData();
     }, []);
@@ -35,18 +32,14 @@ function Community() {
         setExpandedId((prevId) => (prevId === id ? null : id)); // Toggle the same id or collapse
       };
 
+    if (loading) {
+        return <div>One moment please...</div>
+    }
 
-
-    // if (loading) {
-    //     return <div>One moment please...</div>
-    // }
-
-    // if (error) {
-    //     return <div>{error}</div>
-    // }
+    if (error) {
+        return <div>{error}</div>
+    }
         
-
-
     return (
         <div className="community">
             <div className="community__nav-bar">
